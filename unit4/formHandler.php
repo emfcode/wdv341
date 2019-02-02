@@ -1,4 +1,12 @@
 <?php
+	$honeypot = FALSE;
+	if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+		$honeypot = TRUE;
+		log_spambot($_REQUEST);
+		# treat as spambot
+	} else {
+		# process as normal
+	}
 //Model-Controller Area.  The PHP processing code goes in this area. 
 
 	//Method 1.  This uses a loop to read each set of name-value pairs stored in the $_POST array
