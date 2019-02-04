@@ -31,5 +31,5 @@ $clientEmail->setSendToAddress("contact@busines.com");
 
 $clientEmail->setSubjectLine("Weather Report");
 
-$clientEmail->setMessageBody("This is a test of the weather broadcasting system.")
+$clientEmail->setMessageBody("This is a test of the weather broadcasting system.");
 ?>
