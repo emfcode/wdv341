@@ -97,7 +97,7 @@ else
 <h2><?php echo $message?></h2>
 
 <?php
-if ($_SESSION['validUser'] == "yes")
+if (isset($_SESSION['validUser']) && $_SESSION['validUser'] == "yes")
 //This is a valid user.  Show them the Administrator Page
 {
 
