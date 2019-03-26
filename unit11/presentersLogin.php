@@ -3,7 +3,9 @@
 session_cache_limiter('none'); //This prevents a Chrome error when using the back button to return to this page.
 session_start();
 
-if ($_SESSION['validUser'] == "yes")
+$message="";
+
+if (isset($_SESSION['validUser']) && $_SESSION['validUser'] == "yes")
 //is this already a valid user?
 {
 //User is already signed on.  Skip the rest.
